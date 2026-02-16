@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Инициализация иконок Lucide
+    // 1. Inicjalizacja ikon Lucide
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
-    // 2. Инициализация AOS (Анимации)
+    // 2. Inicjalizacja AOS (Animacje)
     AOS.init({
         duration: 800,
         easing: 'ease-out-cubic',
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 50
     });
 
-    // 3. Интерактивный фон Vanta.js
+    // 3. Interaktywne tło Vanta.js
     if (document.getElementById('hero-interactive-bg')) {
         VANTA.NET({
             el: "#hero-interactive-bg",
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Мобильное меню (Бургер)
+    // 4. Menu mobilne (Burger)
     const burger = document.getElementById('burgerBtn');
     const menu = document.getElementById('mobileMenu');
     const body = document.body;
@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     burger?.addEventListener('click', toggleMenu);
 
-    // Закрытие меню при клике на ссылку
+    // Zamknięcie menu po kliknięciu w link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (menu.classList.contains('active')) toggleMenu();
         });
     });
 
-    // 5. Header эффект при скролле
+    // 5. Efekt Headera podczas przewijania
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -67,14 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 6. FAQ Аккордеон
+    // 6. Akordeon FAQ
     const faqItems = document.querySelectorAll('.faq__item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq__question');
         question?.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            // Опционально: закрыть другие
-            // faqItems.forEach(i => i.classList.remove('active'));
             
             item.classList.toggle('active');
             const icon = item.querySelector('i');
@@ -85,18 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Логика формы и Капча
+    // 7. Logika formularza i Captcha
     const form = document.getElementById('mainForm');
     const captchaLabel = document.getElementById('captchaLabel');
     const phoneInput = document.getElementById('phoneInput');
     
-    // Генерация капчи
+    // Generowanie captchy
     const n1 = Math.floor(Math.random() * 10) + 1;
     const n2 = Math.floor(Math.random() * 5) + 1;
     const result = n1 + n2;
-    if (captchaLabel) captchaLabel.innerText = `Сколько будет ${n1} + ${n2}?`;
+    if (captchaLabel) captchaLabel.innerText = `Ile to jest ${n1} + ${n2}?`;
 
-    // Только цифры в телефоне
+    // Tylko cyfry w numerze telefonu
     phoneInput?.addEventListener('input', (e) => {
         e.target.value = e.target.value.replace(/[^\d+]/g, '');
     });
@@ -108,12 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = form.querySelector('button');
 
         if (parseInt(captchaInput) !== result) {
-            alert('Ошибка капчи. Попробуйте еще раз.');
+            alert('Błąd captcha. Spróbuj ponownie.');
             return;
         }
 
         btn.disabled = true;
-        btn.innerHTML = '<span>Отправка...</span>';
+        btn.innerHTML = '<span>Wysyłanie...</span>';
 
         setTimeout(() => {
             form.reset();
@@ -123,16 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1500);
     });
 
-    // 8. Cookie Popup
+    // 8. Popup Cookie
     const cookiePopup = document.getElementById('cookiePopup');
     const acceptBtn = document.getElementById('acceptCookies');
 
-    if (!localStorage.getItem('cookies_zeno_accepted')) {
+    if (!localStorage.getItem('cookies_accepted_glimmr')) {
         setTimeout(() => cookiePopup?.classList.add('active'), 3000);
     }
 
     acceptBtn?.addEventListener('click', () => {
-        localStorage.setItem('cookies_zeno_accepted', 'true');
+        localStorage.setItem('cookies_accepted_glimmr', 'true');
         cookiePopup.classList.remove('active');
     });
 });

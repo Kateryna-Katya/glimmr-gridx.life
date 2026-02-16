@@ -117,7 +117,7 @@
                     <ul class="about__features">
                         <li class="about__feature-item">
                             <i data-lucide="check-circle-2"></i>
-                            <span>Łatwe do zrozumienia bez doświadczenia</span>
+                            <span>Łatwe do opanowania bez doświadczenia</span>
                         </li>
                         <li class="about__feature-item">
                             <i data-lucide="check-circle-2"></i>
@@ -141,7 +141,7 @@
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <span class="section-subtitle">Twoja droga do IT</span>
-                    <h2 class="section-title">Wybierz swój <span class="text-gradient">kierunek</span></h2>
+                    <h2 class="section-title">Wybierz <span class="text-gradient">kierunek</span></h2>
                 </div>
 
                 <div class="courses__grid">
@@ -257,8 +257,8 @@
                         </div>
                         <h3 class="mentor-card__name">Anna Kowalska</h3>
                         <p class="mentor-card__role">Senior Data Scientist</p>
-                        <p class="mentor-card__bio">Specjalistka od narzędzi AI. Pomaga wdrażać innowacje w biznesie na
-                            rynku europejskim.</p>
+                        <p class="mentor-card__bio">Specjalistka od narzędzi AI dla realnych zadań. Pomaga wdrażać
+                            innowacje w biznesie.</p>
                     </div>
 
                     <div class="mentor-card" data-aos="fade-up" data-aos-delay="300">
@@ -267,7 +267,7 @@
                         </div>
                         <h3 class="mentor-card__name">Piotr Nowak</h3>
                         <p class="mentor-card__role">Cybersecurity Expert</p>
-                        <p class="mentor-card__bio">Chroni dane największych sieci handlowych w Polsce. Ekspert ds.
+                        <p class="mentor-card__bio">Chroni dane największych sieci handlowych w Polsce. Ekspert od
                             bezpieczeństwa Web 3.0.</p>
                     </div>
                 </div>
@@ -281,18 +281,19 @@
                     <h2 class="section-title">Często zadawane <br><span class="text-gradient">pytania</span></h2>
                     <p class="faq__text">Zebraliśmy odpowiedzi na najpopularniejsze zapytania. Jeśli nie znajdziesz
                         potrzebnych informacji, nasze wsparcie jest dostępne 24/7.</p>
-                    <a href="#contact" class="btn btn--secondary">Zadaj pytanie</a>
+                    <a href="#contact" class="btn btn--secondary">Zadaj własne pytanie</a>
                 </div>
 
                 <div class="faq__list" data-aos="fade-left">
                     <div class="faq__item">
                         <button class="faq__question">
-                            <span>Czy potrzebuję doświadczenia, aby zacząć?</span>
+                            <span>Czy potrzebuję doświadczenia, aby zacząć naukę?</span>
                             <i data-lucide="plus"></i>
                         </button>
                         <div class="faq__answer">
-                            <p>Nie, nasz program opiera się na zasadzie „łatwe do zrozumienia bez doświadczenia”.
-                                Oferujemy ścieżkę krok po kroku, od podstaw do zaawansowanych technologii.</p>
+                            <p>Nie, nasz program jest zbudowany według zasady „łatwe do opanowania bez doświadczenia”.
+                                Oferujemy ścieżkę krok po kroku, zrozumiałą dla każdego, od podstaw po zaawansowane
+                                technologie.</p>
                         </div>
                     </div>
 
@@ -313,8 +314,8 @@
                             <i data-lucide="plus"></i>
                         </button>
                         <div class="faq__answer">
-                            <p>Tak, oferta jest aktywna we wszystkich krajach UE. Nasze metodologie są zgodne z
-                                europejskimi standardami edukacji IT.</p>
+                            <p>Tak, oferta jest aktywna we wszystkich krajach UE. Nasze metodologie o sprawdzonej
+                                skuteczności spełniają europejskie standardy edukacji IT.</p>
                         </div>
                     </div>
 
@@ -324,7 +325,7 @@
                             <i data-lucide="plus"></i>
                         </button>
                         <div class="faq__answer">
-                            <p>To unikalna technologia dochodu pasywnego dostępna dla naszych absolwentów poprzez sieć
+                            <p>To unikalna technologia dochodu pasywnego, dostępna dla naszych absolwentów poprzez sieć
                                 partnerską i udział w projektach wewnętrznych
                                 <?= $domainTitle ?>.
                             </p>
@@ -339,10 +340,10 @@
                 <div class="contact__grid">
                     <div class="contact__info" data-aos="fade-right">
                         <span class="section-subtitle">Skontaktuj się z nami</span>
-                        <h2 class="section-title">Gotowy, by <span class="text-gradient">zacząć naukę?</span></h2>
+                        <h2 class="section-title">Gotowy, aby <span class="text-gradient">zacząć naukę?</span></h2>
                         <p class="contact__desc">
                             Zostaw zgłoszenie na bezpłatną konsultację. Nasi eksperci skontaktują się z Tobą w ciągu 15
-                            minut, aby pomóc Ci wybrać najlepszą ścieżkę rozwoju.
+                            minut, aby pomóc Ci wybrać najlepszą ścieżkę.
                         </p>
 
                         <div class="contact__details">
@@ -350,17 +351,15 @@
                                 <div class="contact__item-icon"><i data-lucide="phone-call"></i></div>
                                 <div>
                                     <span>Telefon</span>
-                                    <p>
-                                        <?= $phoneNumber ?>
-                                    </p>
+                                    <p>+48 22 733 52 563</p>
                                 </div>
                             </div>
                             <div class="contact__item">
                                 <div class="contact__item-icon"><i data-lucide="mail"></i></div>
                                 <div>
                                     <span>Email</span>
-                                    <p>
-                                        <?= $email ?>
+                                    <p>team@
+                                        <?= $fullDomain ?>
                                     </p>
                                 </div>
                             </div>
@@ -396,7 +395,7 @@
                             </button>
 
                             <div id="formSuccess" class="form-message success">
-                                <i data-lucide="check-circle"></i> Wiadomość została wysłana pomyślnie!
+                                <i data-lucide="check-circle"></i> Wiadomość wysłana pomyślnie!
                             </div>
                         </form>
                     </div>
@@ -425,7 +424,7 @@
                 <ul class="footer__links">
                     <li><a href="./#hero">Start</a></li>
                     <li><a href="./#courses">Kursy</a></li>
-                    <li><a href="./#benefits">Korzyści</a></li>
+                    <li><a href="./#benefits">Zalety</a></li>
                     <li><a href="./#faq">Pytania i odpowiedzi</a></li>
                 </ul>
             </div>
@@ -448,14 +447,12 @@
                 <ul class="footer__contact-list">
                     <li>
                         <i data-lucide="phone"></i>
-                        <a href="tel:<?= str_replace(' ', '', $phoneNumber) ?>">
-                            <?= $phoneNumber ?>
-                        </a>
+                        <a href="tel:+482273352563">+48 22 733 52 563</a>
                     </li>
                     <li>
                         <i data-lucide="mail"></i>
-                        <a href="mailto:<?= $email ?>">
-                            <?= $email ?>
+                        <a href="mailto:hello@<?= $fullDomain ?>">hello@
+                            <?= $fullDomain ?>
                         </a>
                     </li>
                     <li>
@@ -476,8 +473,8 @@
 
     <div class="cookie-popup" id="cookiePopup">
         <div class="cookie-popup__content">
-            <p>Ta strona używa plików cookies w celu poprawy jakości usług. Więcej w naszej <a
-                    href="./cookies.php">Polityce Cookies</a>.</p>
+            <p>Ta strona używa plików cookie w celu poprawy działania. Więcej szczegółów w naszej <a
+                    href="./cookies.php">Polityce Cookie</a>.</p>
             <button class="btn btn--primary btn--sm" id="acceptCookies">Akceptuję</button>
         </div>
     </div>

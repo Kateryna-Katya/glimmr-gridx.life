@@ -33,7 +33,7 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
 
     <header class="header">
         <div class="container header__container">
-            <a href="/" class="logo">
+            <a href="./#hero" class="logo">
                 <div class="logo__icon"></div>
                 <span class="logo__text"><?= $domainTitle ?></span>
             </a>
